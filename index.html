@@ -1485,6 +1485,36 @@
       text-align: center;
     }
 
+    .trustpilot-block {
+      display: grid;
+      justify-items: center;
+      gap: 10px;
+      margin: 0 auto 14px;
+    }
+
+    .trustpilot-logo {
+      width: 190px;
+      max-width: 58vw;
+      height: auto;
+    }
+
+    .trustpilot-rating {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: #00122B;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+
+    .trustpilot-stars {
+      width: 150px;
+      max-width: 42vw;
+      height: auto;
+    }
+
     .review-stars-large {
       color: var(--color-star);
       font-size: 22px;
@@ -2738,6 +2768,123 @@
         overflow-x: hidden !important;
         gap: 6px !important;
       }
+
+      .trustpilot-block {
+        gap: 8px !important;
+        margin-bottom: 10px !important;
+      }
+
+      .trustpilot-logo {
+        width: 152px !important;
+        max-width: 46vw !important;
+      }
+
+      .trustpilot-rating {
+        gap: 8px !important;
+        font-size: 13px !important;
+        line-height: 18px !important;
+        white-space: nowrap !important;
+      }
+
+      .trustpilot-stars {
+        width: 116px !important;
+        max-width: 32vw !important;
+      }
+    }
+
+    .ingredients-section .split-block {
+      gap: 24px;
+      align-items: center;
+    }
+
+    .ingredients-section .copy-block {
+      text-align: center;
+      align-items: center;
+    }
+
+    .ingredients-section .copy-block h2 {
+      margin-bottom: 12px;
+    }
+
+    .ingredients-section .copy-block p {
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ingredients-section .ingredients-visual {
+      width: 100%;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .ingredients-mobile-visual {
+      display: none;
+    }
+
+    @media (max-width: 743px) {
+      .ingredients-section .split-block,
+      .ingredients-section .copy-block,
+      .ingredients-section .copy-stack {
+        text-align: center !important;
+      }
+
+      .ingredients-mobile-visual {
+        display: block !important;
+        width: 100%;
+        max-width: 100%;
+        margin: 18px auto 20px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .ingredients-section .ingredients-visual {
+        display: none !important;
+      }
+
+      .ingredients-section .copy-stack {
+        gap: 16px;
+        margin-top: 0;
+      }
+
+      .ingredients-section .copy-block p {
+        max-width: 360px !important;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width: 744px) {
+      .ingredients-section .split-block {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 40px;
+      }
+
+      .ingredients-section .copy-block h2,
+      .ingredients-section .copy-block p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .trustpilot-block {
+        margin-bottom: 16px;
+      }
+
+      .trustpilot-logo {
+        width: 205px;
+      }
+
+      .trustpilot-stars {
+        width: 158px;
+      }
+
+      .reviews-section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
     }
   </style>
 </head>
@@ -2855,24 +3002,37 @@
       </div>
     </section>
 
-    <section class="lp-section lp-section--blue">
-      <div class="lp-inner proof-grid">
-        <div class="proof-copy">
-          <h2>Frissere huid zonder ingewikkelde stappen</h2>
-          <p>Ontworpen voor dagelijks gebruik wanneer je huid droog, dof of minder glad aanvoelt.</p>
+    <section class="lp-section lp-section--blue ingredients-section">
+      <div class="lp-inner split-block">
+        <div class="copy-block">
+          <h2>Wat zit er in PeptiGlow?</h2>
+          <div class="ingredients-mobile-visual" aria-label="PeptiGlow ingredienten">
+            <img class="section-img" src="ingre.png" alt="PeptiGlow ingredienten">
+          </div>
+          <div class="copy-stack">
+            <p>Een korte, transparante formule gebouwd rond Copper Tripeptide-1, met hydraterende ingrediënten die passen in een simpele dagelijkse skincare routine.</p>
+            <p>De formule dringt dieper door dan een gewone crème. Waar dagcrèmes op de oppervlakte blijven liggen, werkt PeptiGlow™ op celniveau — daar waar je huid zichzelf herstelt en nieuw collageen aanmaakt.</p>
+            <p>De textuur voelt licht aan, trekt binnen seconden in en laat geen plakkerig gevoel achter. Perfect onder moisturizer, SPF of make-up.</p>
+            <p>Bedoeld voor vrouwen die merken dat hun huid droger, doffer of minder glad aanvoelt — en klaar zijn voor een serumstap die écht verschil maakt.</p>
+          </div>
+          <a class="btn-primary" href="#offer">Bestel Nu →</a>
+          <div class="cta-note">Nog maar 6 op voorraad!</div>
         </div>
-        <div class="proof-list">
-          <div class="proof-row"><div class="ring" style="--percent:94%"><span>94%</span></div><p>Vond dat de huid zachter en beter gehydrateerd aanvoelde.</p></div>
-          <div class="proof-row"><div class="ring" style="--percent:89%"><span>89%</span></div><p>Zag een frissere, gladdere uitstraling bij consequent gebruik.</p></div>
-          <div class="proof-row"><div class="ring" style="--percent:92%"><span>92%</span></div><p>Vond de formule licht, comfortabel en geschikt onder make-up.</p></div>
-          <p class="graph-disclaimer">Gebaseerd op klantfeedback. Resultaten kunnen per huid en routine verschillen.</p>
+        <div class="ingredients-visual" aria-label="PeptiGlow ingredienten">
+          <img class="section-img" src="ingre.png" alt="PeptiGlow ingredienten">
         </div>
       </div>
     </section>
 
     <section class="lp-section reviews-section">
       <div class="lp-inner">
-        <div class="review-stars-large">★★★★★</div>
+        <div class="trustpilot-block" aria-label="Trustpilot beoordeling">
+          <img class="trustpilot-logo" src="trustlogo.svg" alt="Trustpilot">
+          <div class="trustpilot-rating">
+            <img class="trustpilot-stars" src="stars.webp" alt="5 sterren">
+            <span>Gebaseerd op 10.452 beoordelingen</span>
+          </div>
+        </div>
         <h2 class="reviews-heading">Geloof ons niet zomaar—kijk wat anderen zeggen!<br>10.452+ geverifieerde beoordelingen</h2>
         <div class="review-cards">
           <article class="customer-card">
