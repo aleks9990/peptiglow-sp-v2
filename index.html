@@ -1395,6 +1395,16 @@
       margin: 18px 0 20px;
     }
 
+    .routine-copy {
+      display: grid;
+      gap: 16px;
+      margin: 18px auto 20px;
+      max-width: 520px;
+      font-size: 16px;
+      line-height: 24px;
+      color: #00122B;
+    }
+
     .step-row {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
@@ -2105,9 +2115,43 @@
       text-transform: none;
     }
 
+    .sticky-stock-label {
+      color: #FFFFFF;
+    }
+
+    .sticky-ship-copy {
+      color: #FFFFFF;
+    }
+
+    .sticky-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #FF4B5C;
+      box-shadow: 0 0 0 0 rgba(255, 75, 92, 0.55);
+      animation: stickyPulse 1.4s ease-in-out infinite;
+      flex: 0 0 auto;
+    }
+
+    .sticky-timer {
+      color: #D0021B;
+      font-weight: 800;
+    }
+
     @keyframes scroll {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-50%); }
+    }
+
+    @keyframes stickyPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 75, 92, 0.55);
+      }
+      50% {
+        transform: scale(0.82);
+        box-shadow: 0 0 0 5px rgba(255, 75, 92, 0);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -2323,14 +2367,40 @@
       }
       .sticky-cta .btn-primary {
         min-height: 72px;
-        padding: 11px 8px 10px;
+        padding: 8px 0 0;
         font-size: 20px;
         line-height: 24px;
+        overflow: hidden;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+      .sticky-cta-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex: 1 1 auto;
+        text-align: center;
+        transform: none;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin-bottom: 2px;
+      }
+      .sticky-cta-sub {
+        width: 100%;
+        display: flex;
+        gap: 2px;
+        align-items: center;
+        justify-content: center;
+        background: #000000;
+        border-radius: 0;
+        padding: 3px 8px 4px;
+        margin-top: auto;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
       }
       .sticky-cta-main { white-space: nowrap; }
-      .sticky-cta-sub {
-        display: block;
-      }
     }
 
     @media (min-width: 744px) {
@@ -2790,6 +2860,25 @@
         width: 116px !important;
         max-width: 32vw !important;
       }
+
+      .routine-copy {
+        width: 100% !important;
+        max-width: 360px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        gap: 16px !important;
+        text-align: center !important;
+      }
+
+      .routine-copy p {
+        width: 100% !important;
+        max-width: 360px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        font-size: 16px !important;
+        line-height: 24px !important;
+        text-align: center !important;
+      }
     }
 
     .ingredients-section .split-block {
@@ -2987,14 +3076,13 @@
           <img class="section-img" src="3step.png" alt="PeptiGlow routine">
         </div>
         <div class="steps-content">
-          <h2>3 simpele stappen, elke ochtend of avond</h2>
+          <h2>Eén minuut per dag voor zichtbaar verschil</h2>
           <div class="mobile-inline-image">
             <img class="section-img" src="3step.png" alt="PeptiGlow routine">
           </div>
-          <div class="steps-list">
-            <div class="step-row"><span class="step-num">1</span><div><strong>Reinig en droog je gezicht</strong><p>Gebruik PeptiGlow op een schone, droge huid.</p></div></div>
-            <div class="step-row"><span class="step-num">2</span><div><strong>Breng een kleine hoeveelheid aan</strong><p>Verdeel 2-3 druppels gelijkmatig over gezicht en hals.</p></div></div>
-            <div class="step-row"><span class="step-num">3</span><div><strong>Masseer zachtjes in</strong><p>Laat het serum intrekken en sluit af met moisturizer. Overdag altijd SPF gebruiken.</p></div></div>
+          <div class="routine-copy">
+            <p>Reinig je gezicht en breng PeptiGlow™ aan op een schone, droge huid. Verdeel 2-3 druppels gelijkmatig over je gezicht en hals en masseer het serum zachtjes in met je vingertoppen.</p>
+            <p>De lichte formule trekt binnen seconden in zonder plakkerig gevoel. Sluit af met je moisturizer en gebruik overdag altijd SPF. 's Ochtends of 's avonds — het past in elke routine.</p>
           </div>
           <a class="btn-primary" href="#offer">Bestel Nu →</a>
           <div class="cta-note">Nog maar 6 op voorraad!</div>
@@ -3054,12 +3142,7 @@
     <section class="lp-section pg-compare-section">
       <div class="lp-inner">
         <h2>Wat je creme je niet vertelt</h2>
-        <p class="pg-compare-sub">Daarom stappen 12.000+ vrouwen over naar PeptiGlow™</p>
         <img class="pg-compare-img" src="table.png" alt="Vergelijking tussen gewone creme en PeptiGlow serum">
-        <p class="pg-compare-quote">
-          "Ik gebruikte jarenlang dure cremes. PeptiGlow was de eerste stap die ik echt voelde."
-          <span>- Eva K., Geverifieerde Klant</span>
-        </p>
       </div>
     </section>
 
@@ -3112,7 +3195,7 @@
   <div class="sticky-cta" id="sticky-cta">
     <div class="sticky-inner">
       <div class="sticky-product"><span class="mini-product"></span><span>ZOMERDEAL actief</span></div>
-      <a class="btn-primary" href="#offer"><span class="sticky-cta-main">BESTEL NU MET KORTING →</span><span class="sticky-cta-sub">Bijna op | Binnen 9:59 vandaag verzonden!</span></a>
+      <a class="btn-primary" href="#offer"><span class="sticky-cta-main">BESTEL NU MET KORTING →</span><span class="sticky-cta-sub"><span class="sticky-pulse" aria-hidden="true"></span><span class="sticky-stock-label">Bijna op | </span><span class="sticky-ship-copy">Binnen <span class="sticky-timer">9:59</span> vandaag verzonden!</span></span></a>
     </div>
   </div>
 
@@ -3161,18 +3244,21 @@
 
     renderThumbWindow();
 
-    const stickyTimer = document.querySelector(".sticky-cta-sub");
+    const stickyTimer = document.querySelector(".sticky-timer");
+    const stickyShipCopy = document.querySelector(".sticky-ship-copy");
+    const stickyStockLabel = document.querySelector(".sticky-stock-label");
     let stickySecondsLeft = 9 * 60 + 59;
 
     function updateStickyTimer() {
       if (!stickyTimer) return;
       if (stickySecondsLeft <= 0) {
-        stickyTimer.textContent = "Bijna op";
+        if (stickyStockLabel) stickyStockLabel.textContent = "Bijna op";
+        if (stickyShipCopy) stickyShipCopy.style.display = "none";
         return;
       }
       const minutes = Math.floor(stickySecondsLeft / 60);
       const seconds = String(stickySecondsLeft % 60).padStart(2, "0");
-      stickyTimer.textContent = `Bijna op | Binnen ${minutes}:${seconds} vandaag verzonden!`;
+      stickyTimer.textContent = `${minutes}:${seconds}`;
       stickySecondsLeft -= 1;
     }
 
