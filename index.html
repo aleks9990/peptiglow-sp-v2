@@ -129,7 +129,7 @@
       padding: 16px 0;
       overflow: hidden;
       white-space: nowrap;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 20px;
       font-weight: 800;
       text-transform: uppercase;
@@ -436,38 +436,31 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 12px;
-      line-height: 16px;
+      font-size: 14px;
+      line-height: 20px;
       color: #111111;
       margin-bottom: 24px;
-      font-weight: 700;
-      text-transform: uppercase;
+      font-weight: 400;
+      text-transform: none;
     }
 
-    .stars {
-      color: var(--color-star);
-      letter-spacing: 0;
-      padding-right: 0;
-      border-right: 0;
+    .hero-rating-stars {
+      width: 104px;
+      max-width: 34vw;
+      height: auto;
+      display: block;
+      flex: 0 0 auto;
     }
 
-    .review-faces {
-      display: flex;
+    .hero-rating-copy {
+      display: inline-flex;
       align-items: center;
-      margin-right: 2px;
+      font-size: 15px;
+      line-height: 1;
+      color: #090908;
+      font-weight: 400;
+      white-space: nowrap;
     }
-
-    .face {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      border: 1px solid #FFFFFF;
-      background: linear-gradient(145deg, #F1C8B7, #A8D7F3);
-      margin-left: -6px;
-      box-shadow: rgba(13, 39, 64, 0.12) 0 2px 4px;
-    }
-
-    .face:first-child { margin-left: 0; }
 
     .hero-content {
       display: flex;
@@ -528,7 +521,7 @@
       display: grid;
       place-items: center;
       font-weight: 800;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 20px;
       margin-top: 2px;
     }
@@ -591,6 +584,44 @@
       line-height: 23px;
       font-weight: 400;
       color: #090908;
+    }
+
+    .hero-price-line {
+      width: 100%;
+      margin: 4px 0 22px;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 7px;
+      flex-wrap: wrap;
+      color: #090908;
+      text-align: center;
+    }
+
+    .hero-price-old {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #4A4A4A;
+      text-decoration: line-through;
+      text-decoration-thickness: 1.5px;
+    }
+
+    .hero-price-current {
+      font-size: 26px;
+      line-height: 30px;
+      font-weight: 800;
+      color: var(--color-sale-price);
+    }
+
+    .hero-price-save {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 800;
+      color: var(--color-savings-red);
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 2px;
     }
 
     .hero-testimonial {
@@ -1277,11 +1308,30 @@
 
     .cta-note {
       margin-top: 8px;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 16px;
-      font-weight: 700;
-      color: var(--color-text-muted);
+      font-weight: 400;
+      color: #090908;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .cta-note-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #FF4B5C;
+      box-shadow: 0 0 0 0 rgba(255, 75, 92, 0.55);
+      animation: stickyPulse 1.4s ease-in-out infinite;
+      flex: 0 0 auto;
+    }
+
+    .cta-stock-number {
+      color: #FF4B5C;
+      font-weight: 800;
     }
 
     .lp-section .btn-primary {
@@ -1536,52 +1586,35 @@
       text-align: center;
     }
 
-    .reviews-heading {
+    .reviews-trust-summary {
       display: grid;
-      gap: 4px;
+      justify-items: center;
+      gap: 8px;
+      max-width: 720px;
+      margin: 0 auto 26px;
+    }
+
+    .reviews-gold-stars {
+      color: #d29629;
+      font-size: 27px;
+      line-height: 1;
+      letter-spacing: 2px;
+    }
+
+    .reviews-heading {
+      display: block;
+      max-width: 680px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .reviews-heading span {
-      display: block;
-    }
-
-    .reviews-heading-count {
-      display: block;
-      font-size: 17px;
-      line-height: 24px;
-      font-weight: 800;
-    }
-
-    .trustpilot-block {
-      display: grid;
-      justify-items: center;
-      gap: 10px;
-      margin: 0 auto 14px;
-    }
-
-    .trustpilot-logo {
-      width: 190px;
-      max-width: 58vw;
-      height: auto;
-    }
-
-    .trustpilot-rating {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: #00122B;
+    .reviews-subheading {
       font-size: 16px;
       line-height: 24px;
-      font-weight: 500;
-    }
-
-    .trustpilot-stars {
-      width: 150px;
-      max-width: 42vw;
-      height: auto;
+      font-weight: 400;
+      color: #090908;
+      max-width: 560px;
+      margin: 2px auto 0;
     }
 
     .review-stars-large {
@@ -1639,13 +1672,22 @@
       font-weight: 800;
     }
 
-    .customer-body a {
-      display: block;
-      font-size: 12px;
+    .customer-verified {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-size: 14px;
       line-height: 16px;
-      font-weight: 800;
-      text-decoration: underline;
+      font-weight: 400;
       margin-bottom: 14px;
+    }
+
+    .customer-verified img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      flex: 0 0 auto;
     }
 
     .customer-body p {
@@ -1671,14 +1713,122 @@
       font-size: 24px;
       line-height: 32px;
       font-weight: 800;
-      margin-bottom: 8px;
+      max-width: 760px;
+      margin: 0 auto 8px;
     }
 
     .pg-compare-sub {
       color: var(--color-text-medium);
       font-size: 16px;
       line-height: 24px;
-      margin-bottom: 24px;
+      max-width: 680px;
+      margin: 0 auto 24px;
+    }
+
+    .pg-compare-card {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+      max-width: 1044px;
+      margin: 0 auto;
+      border: 1px solid rgba(77, 162, 241, 0.42);
+      border-radius: 8px;
+      background: #FFFFFF;
+      overflow: hidden;
+    }
+
+    .pg-compare-col {
+      padding: 24px;
+      text-align: left;
+    }
+
+    .pg-compare-col + .pg-compare-col {
+      border-left: 1px solid rgba(77, 162, 241, 0.42);
+    }
+
+    .pg-compare-visual {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      margin: 0 0 18px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #F7F7F7;
+    }
+
+    .pg-compare-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pg-compare-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pg-compare-list li {
+      display: grid;
+      grid-template-columns: 22px minmax(0, 1fr);
+      align-items: start;
+      gap: 10px;
+      color: #00122B;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+
+    .pg-compare-icon {
+      display: inline-grid;
+      place-items: center;
+      position: relative;
+      width: 22px;
+      height: 22px;
+      font-size: 0;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .pg-compare-icon::before {
+      display: block;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    .pg-compare-icon--yes::before {
+      content: "✓";
+    }
+
+    .pg-compare-icon--yes {
+      color: #197C16;
+    }
+
+    .pg-compare-icon--no::before,
+    .pg-compare-icon--no::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 19px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transform-origin: center;
+    }
+
+    .pg-compare-icon--no::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .pg-compare-icon--no::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .pg-compare-icon--no {
+      color: #D0021B;
     }
 
     .pg-compare-table-wrap {
@@ -1803,6 +1953,10 @@
       background: #EAF6FD;
       border-top: 1px solid rgba(77, 162, 241, 0.28);
       border-bottom: 1px solid rgba(77, 162, 241, 0.28);
+    }
+
+    .guarantee-section .copy-stack {
+      margin-bottom: 0;
     }
 
     .guarantee-seal {
@@ -2006,13 +2160,6 @@
       background-position: center;
     }
 
-    .review-faces-img {
-      width: 80px;
-      height: 28px;
-      object-fit: contain;
-      flex: 0 0 auto;
-    }
-
     .hero-testimonial {
       display: flex;
       align-items: center;
@@ -2077,8 +2224,8 @@
     }
 
     .gratis-img {
-      max-width: 700px;
-      margin: 24px auto 8px;
+      max-width: 780px;
+      margin: 38px auto 0;
     }
 
     .offer-panel {
@@ -2276,6 +2423,7 @@
       .steps-content h2,
       .proof-copy h2,
       .reviews-heading,
+      .pg-compare-section h2,
       .faq-flat h2,
       .guarantee-title,
       .offer-title {
@@ -2343,9 +2491,32 @@
         font-size: 14px;
         line-height: 21px;
       }
+      .hero-price-line {
+        margin: 4px 0 20px;
+        gap: 5px;
+      }
+      .hero-price-old {
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .hero-price-current {
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .hero-price-save {
+        font-size: 18px;
+        line-height: 24px;
+      }
       .rating {
         flex-wrap: wrap;
         row-gap: 6px;
+      }
+      .hero-rating-stars {
+        width: 96px;
+      }
+      .hero-rating-copy {
+        font-size: 14px;
+        line-height: 1;
       }
       .benefit-list li span:last-child,
       .testimonial-bubble {
@@ -2448,6 +2619,12 @@
       .offer-img {
         max-width: 300px;
       }
+      .gratis-img {
+        margin-top: 36px;
+      }
+      .lp-section.guarantee-section {
+        padding-bottom: 24px;
+      }
       .sticky-cta {
         background: #090908;
         box-shadow: rgba(0, 0, 0, 0.28) 0 -4px 16px;
@@ -2538,6 +2715,7 @@
       .steps-content h2,
       .proof-copy h2,
       .reviews-heading,
+      .pg-compare-section h2,
       .faq-flat h2,
       .guarantee-title,
       .offer-title {
@@ -2955,35 +3133,73 @@
         gap: 6px !important;
       }
 
-      .trustpilot-block {
-        gap: 8px !important;
-        margin-bottom: 10px !important;
+      .reviews-trust-summary {
+        gap: 7px !important;
+        margin-bottom: 22px !important;
       }
 
-      .reviews-heading {
-        gap: 3px !important;
+      .reviews-gold-stars {
+        font-size: 25px !important;
+        letter-spacing: 1.5px !important;
       }
 
-      .reviews-heading-count {
+      .reviews-subheading {
         font-size: 15px !important;
-        line-height: 20px !important;
+        line-height: 22px !important;
+        max-width: 300px !important;
       }
 
-      .trustpilot-logo {
-        width: 152px !important;
-        max-width: 46vw !important;
+      .pg-compare-sub {
+        font-size: 15px !important;
+        line-height: 22px !important;
+        max-width: 300px !important;
+        margin: 0 auto 24px !important;
       }
 
-      .trustpilot-rating {
-        gap: 8px !important;
-        font-size: 13px !important;
-        line-height: 18px !important;
-        white-space: nowrap !important;
+      .pg-compare-card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
       }
 
-      .trustpilot-stars {
-        width: 116px !important;
-        max-width: 32vw !important;
+      .pg-compare-col {
+        padding: 9px 6px 10px;
+      }
+
+      .pg-compare-col + .pg-compare-col {
+        border-left: 1px solid rgba(77, 162, 241, 0.42);
+        border-top: 0;
+      }
+
+      .pg-compare-visual {
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      .pg-compare-list {
+        gap: 7px;
+      }
+
+      .pg-compare-list li {
+        grid-template-columns: 16px minmax(0, 1fr);
+        gap: 5px;
+        font-size: 12px;
+        line-height: 17px;
+      }
+
+      .pg-compare-icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      .pg-compare-icon::before {
+        font-size: 15px;
+        line-height: 16px;
+      }
+
+      .pg-compare-icon--no::before,
+      .pg-compare-icon--no::after {
+        width: 14px;
+        height: 1.8px;
       }
 
       .routine-copy {
@@ -3083,16 +3299,12 @@
         margin-right: auto;
       }
 
-      .trustpilot-block {
-        margin-bottom: 16px;
+      .reviews-trust-summary {
+        margin-bottom: 30px;
       }
 
-      .trustpilot-logo {
-        width: 205px;
-      }
-
-      .trustpilot-stars {
-        width: 158px;
+      .reviews-gold-stars {
+        font-size: 30px;
       }
 
       .reviews-section {
@@ -3136,10 +3348,9 @@
         </div>
 
         <div class="hero-content">
-          <div class="rating">
-            <img class="review-faces-img" src="models.png" alt="">
-            <span class="stars" aria-label="Five star rating">★★★★★</span>
-            <span>12.000+ tevreden klanten</span>
+          <div class="rating" aria-label="Uitstekend 4,8 uit 5 op basis van 1.822 beoordelingen">
+            <img class="hero-rating-stars" src="stars.webp" alt="5 sterren">
+            <span class="hero-rating-copy">Uitstekend 4,8 | 1.822 beoordelingen</span>
           </div>
           <h1>PeptiGlow™ GHK-Cu Serum Voor een frissere, gladdere en voller gehydrateerde huid</h1>
           <ul class="benefit-list">
@@ -3155,6 +3366,11 @@
               <div class="hero-guarantee-title">Voel het verschil – of krijg je geld terug!</div>
               <div class="hero-guarantee-text">Probeer het 90 dagen volledig risicovrij. Als je geen echt verschil ziet, krijg je 100% van je geld terug.</div>
             </div>
+          </div>
+          <div class="hero-price-line" aria-label="Actieprijs: van 50 euro voor 24 euro 95, bespaar 25 euro">
+            <span class="hero-price-old">€50,00</span>
+            <span class="hero-price-current">€24,95</span>
+            <span class="hero-price-save">Bespaar €25!</span>
           </div>
           <a class="btn-primary" href="https://aleks9990.github.io/PeptiGlow-Checkout/">Bestel Nu→ <small>50% korting eindigt vanavond om 23:59 uur</small></a>
           <div class="hero-testimonial">
@@ -3194,7 +3410,7 @@
             <p>Geen zware laag, geen plakkerig gevoel. <strong>Eén stap</strong> die moeiteloos onder moisturizer, SPF of make-up past.</p>
           </div>
           <a class="btn-primary" href="https://aleks9990.github.io/PeptiGlow-Checkout/">Bestel Nu →</a>
-          <div class="cta-note">Nog maar 6 op voorraad!</div>
+          <div class="cta-note"><span class="cta-note-pulse" aria-hidden="true"></span><span>Nog maar <span class="cta-stock-number">6</span> op voorraad!</span></div>
         </div>
         <div class="how-visual" aria-label="Hoe het werkt">
           <img class="section-img" src="photo2.png" alt="Hoe PeptiGlow werkt">
@@ -3217,7 +3433,7 @@
             <p>De lichte formule voelt <strong>direct comfortabel</strong>, zonder plakkerig of zwaar gevoel. Werk af met je moisturizer en gebruik overdag altijd SPF. <strong>'s Ochtends of 's avonds</strong> — het past <strong>moeiteloos</strong> in je routine.</p>
           </div>
           <a class="btn-primary" href="https://aleks9990.github.io/PeptiGlow-Checkout/">Bestel Nu →</a>
-          <div class="cta-note">Nog maar 6 op voorraad!</div>
+          <div class="cta-note"><span class="cta-note-pulse" aria-hidden="true"></span><span>Nog maar <span class="cta-stock-number">6</span> op voorraad!</span></div>
         </div>
       </div>
     </section>
@@ -3235,7 +3451,7 @@
             <p>Voor vrouwen die merken dat hun huid droger, doffer of minder glad aanvoelt — en klaar zijn voor de stap die <strong>écht verschil</strong> maakt.</p>
           </div>
           <a class="btn-primary" href="https://aleks9990.github.io/PeptiGlow-Checkout/">Bestel Nu →</a>
-          <div class="cta-note">Nog maar 6 op voorraad!</div>
+          <div class="cta-note"><span class="cta-note-pulse" aria-hidden="true"></span><span>Nog maar <span class="cta-stock-number">6</span> op voorraad!</span></div>
         </div>
         <div class="ingredients-visual" aria-label="PeptiGlow ingredienten">
           <img class="section-img" src="ingre.png" alt="PeptiGlow ingredienten">
@@ -3245,26 +3461,23 @@
 
     <section class="lp-section reviews-section">
       <div class="lp-inner">
-        <div class="trustpilot-block" aria-label="Trustpilot beoordeling">
-          <img class="trustpilot-logo" src="trustlogo.svg" alt="Trustpilot">
-          <div class="trustpilot-rating">
-            <img class="trustpilot-stars" src="stars.webp" alt="5 sterren">
-            <span>Gebaseerd op 10.452 beoordelingen</span>
-          </div>
+        <div class="reviews-trust-summary" aria-label="Klantvertrouwen">
+          <div class="reviews-gold-stars" aria-label="5 sterren">★★★★★</div>
+          <h2 class="reviews-heading">Vertrouwd door meer dan 9.000 geverifieerde klanten</h2>
+          <p class="reviews-subheading">Sluit je vandaag nog aan bij duizenden tevreden gebruikers!</p>
         </div>
-        <h2 class="reviews-heading"><span>Geloof ons niet zomaar</span><span>Kijk wat anderen zeggen!</span><span class="reviews-heading-count">10.452+ geverifieerde beoordelingen</span></h2>
         <div class="review-cards">
           <article class="customer-card">
             <div class="customer-photo"><img class="review-img" src="review1.png" alt="Lisa M. review photo"></div>
-            <div class="customer-body"><h3>Lisa M.</h3><a href="#">Geverifieerde Klant</a><p>“Ik gebruik PeptiGlow nu drie weken. Mijn huid voelt rustiger en zachter, en mijn foundation pakt veel egaler. Vooral fijn dat het serum niet plakt.”</p></div>
+            <div class="customer-body"><h3>Lisa M.</h3><span class="customer-verified"><img src="customer.png" alt="" aria-hidden="true">Geverifieerde Klant</span><p>“Ik gebruik PeptiGlow nu drie weken. Mijn huid voelt rustiger en zachter, en mijn foundation pakt veel egaler. Vooral fijn dat het serum niet plakt.”</p></div>
           </article>
           <article class="customer-card">
             <div class="customer-photo"><img class="review-img" src="review2.png" alt="Eva K. review photo"></div>
-            <div class="customer-body"><h3>Eva K.</h3><a href="#">Geverifieerde Klant</a><p>“Na de eerste dagen merkte ik vooral meer hydratatie. Mijn wangen voelen minder trekkerig en mijn huid ziet er frisser uit zonder extra zware creme.”</p></div>
+            <div class="customer-body"><h3>Eva K.</h3><span class="customer-verified"><img src="customer.png" alt="" aria-hidden="true">Geverifieerde Klant</span><p>“Na de eerste dagen merkte ik vooral meer hydratatie. Mijn wangen voelen minder trekkerig en mijn huid ziet er frisser uit zonder extra zware creme.”</p></div>
           </article>
           <article class="customer-card">
             <div class="customer-photo"><img class="review-img" src="review3.png" alt="Anouk V. review photo"></div>
-            <div class="customer-body"><h3>Anouk V.</h3><a href="#">Geverifieerde Klant</a><p>“Ik was voorzichtig met nieuwe serums, maar deze voelt licht. Twee druppels na het reinigen is genoeg; mijn huid blijft de hele dag comfortabel.”</p></div>
+            <div class="customer-body"><h3>Anouk V.</h3><span class="customer-verified"><img src="customer.png" alt="" aria-hidden="true">Geverifieerde Klant</span><p>“Ik was voorzichtig met nieuwe serums, maar deze voelt licht. Twee druppels na het reinigen is genoeg; mijn huid blijft de hele dag comfortabel.”</p></div>
           </article>
         </div>
       </div>
@@ -3272,8 +3485,42 @@
 
     <section class="lp-section pg-compare-section">
       <div class="lp-inner">
-        <h2>Wat je creme je niet vertelt</h2>
-        <img class="pg-compare-img" src="table.png" alt="Vergelijking tussen gewone creme en PeptiGlow serum">
+        <h2>Waarom PeptiGlow™ werkt waar andere crèmes tekortschieten</h2>
+        <p class="pg-compare-sub">Je hebt crèmes geprobeerd die veel beloofden maar weinig deden. PeptiGlow™ is de serumstap die je huid écht frisser en gladder laat ogen.</p>
+        <div class="pg-compare-card" aria-label="Vergelijking tussen PeptiGlow serum en gewone crèmes">
+          <div class="pg-compare-col">
+            <div class="pg-compare-visual">
+              <img src="photo6.png" alt="PeptiGlow serum">
+            </div>
+            <ul class="pg-compare-list">
+              <li><span class="pg-compare-icon pg-compare-icon--yes">✓</span><span>Trekt binnen seconden in</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--yes">✓</span><span>Lichte, niet-plakkerige textuur</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--yes">✓</span><span>Werkt op celniveau, niet alleen de oppervlakte</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--yes">✓</span><span>Ondersteunt natuurlijke collageenproductie</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--yes">✓</span><span>Met Copper Tripeptide-1 en hyaluronic acid</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--yes">✓</span><span>Geschikt voor dagelijks gebruik</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--yes">✓</span><span>Langdurige hydratatie die je voelt</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--yes">✓</span><span>Past moeiteloos onder moisturizer, SPF of make-up</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--yes">✓</span><span>Zonder parfum of zware vulstoffen</span></li>
+            </ul>
+          </div>
+          <div class="pg-compare-col">
+            <div class="pg-compare-visual">
+              <img src="wrong.png" alt="Gewone crème routine">
+            </div>
+            <ul class="pg-compare-list">
+              <li><span class="pg-compare-icon pg-compare-icon--no">×</span><span>Blijven op de oppervlakte liggen</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--no">×</span><span>Zwaar, vettig of plakkerig gevoel</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--no">×</span><span>Hydrateren alleen tijdelijk</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--no">×</span><span>Geen actieve peptiden of serumwerking</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--no">×</span><span>Dure potjes zonder zichtbaar verschil</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--no">×</span><span>Verstoppen poriën bij dagelijks gebruik</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--no">×</span><span>Resultaat pas na weken, als het al komt</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--no">×</span><span>Lastig te combineren met SPF of make-up</span></li>
+              <li><span class="pg-compare-icon pg-compare-icon--no">×</span><span>Vol synthetische parfum en toevoegingen</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -3297,9 +3544,8 @@
         <div class="copy-stack">
           <p class="guarantee-text">Je bestelling is beschermd door onze 90 dagen geld-terug-garantie.</p>
           <p class="guarantee-text">Niet tevreden met je PeptiGlow routine? Laat het ons binnen 90 dagen weten en we betalen je aankoop terug. Geen gedoe.</p>
-          <p class="guarantee-text">Geen vragen, geen gedoe. Je houdt van je resultaat, of je betaalt niets.</p>
+          <p class="guarantee-text">Geen vragen, geen gedoe. <strong>Je houdt van je resultaat, of je betaalt niets.</strong></p>
         </div>
-        <img class="gratis-img" src="gratis.png" alt="Gratis snelle verzending, 90-dagen retourrecht, klantenservice 24/7">
       </div>
     </section>
 
@@ -3311,6 +3557,10 @@
         <h2 class="offer-title">50% KORTING. ALLEEN VANDAAG BESCHIKBAAR</h2>
         <p class="offer-subcopy"><strong>UPDATE:</strong> Deze actie loopt bijna af en de voorraad raakt op. Claim de jouwe vandaag en ontvang GRATIS VERZENDING bij je bestelling</p>
         <a class="btn-primary" href="https://aleks9990.github.io/PeptiGlow-Checkout/">Bestel Nu→ <small>50% korting eindigt vanavond om 23:59 uur</small></a>
+        <picture>
+          <source media="(max-width: 743px)" srcset="gratisph.png">
+          <img class="gratis-img" src="gratis.png" alt="Gratis snelle verzending, 90-dagen retourrecht, klantenservice 24/7">
+        </picture>
       </div>
     </section>
   </main>
