@@ -3252,6 +3252,7 @@
       max-width: 520px;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
     }
 
     .result-split-section + .faq-flat {
@@ -3268,29 +3269,32 @@
       gap: 12px;
       width: 100%;
       max-width: 520px;
-      margin: 18px auto 0;
+      margin: 34px auto 0;
       padding: 0;
       list-style: none;
+      justify-items: stretch;
       text-align: left;
     }
 
     .result-split-section .result-benefit-grid li {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       justify-content: flex-start;
-      gap: 10px;
-      color: #00122B;
+      gap: 12px;
+      color: #111111;
       font-size: 16px;
       line-height: 24px;
       font-weight: 400;
       text-align: left;
-      padding: 12px 14px;
-      border: 1px solid rgba(77, 162, 241, 0.36);
-      border-radius: 8px;
-      background: transparent;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: none;
     }
 
     .result-split-section .result-benefit-grid span:last-child {
+      display: block;
+      flex: 0 1 auto;
       min-width: 0;
       overflow-wrap: break-word;
     }
@@ -3307,6 +3311,7 @@
       font-size: 14px;
       line-height: 20px;
       font-weight: 800;
+      flex: 0 0 auto;
     }
 
     @media (max-width: 743px) {
@@ -3355,24 +3360,35 @@
       }
 
       .result-split-section .result-benefit-grid {
-        gap: 10px;
-        margin-top: 18px;
+        gap: 12px;
+        margin-top: 34px;
+        width: 100%;
+        max-width: 100%;
+        justify-items: stretch !important;
+        text-align: left !important;
+      }
+
+      .result-split-section .copy-block h2 {
+        text-align: center !important;
       }
 
       .result-split-section .result-benefit-grid li {
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        font-size: 15px;
-        line-height: 22px;
-        text-align: center;
-        padding: 12px 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        text-align: left !important;
       }
 
       .result-benefit-check {
         width: 20px;
         height: 20px;
-        margin-top: 0;
+        margin-top: 2px;
         font-size: 14px;
       }
 
