@@ -895,7 +895,7 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      max-width: 760px;
+      max-width: 1044px;
       margin: 0 auto;
     }
 
@@ -3259,6 +3259,156 @@
       display: none;
     }
 
+    .result-headline-section {
+      padding-bottom: 8px;
+    }
+
+    .result-headline-section + .faq-flat {
+      padding-top: 20px;
+    }
+
+    .result-headline-section h2 {
+      color: #00122B;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 800;
+      letter-spacing: 0;
+      max-width: 880px;
+      margin: 0 auto;
+      text-align: center;
+      overflow-wrap: break-word;
+    }
+
+    .before-image-row {
+      display: grid;
+      grid-template-columns: 44px repeat(2, minmax(0, 1fr)) 44px;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      max-width: 760px;
+      margin: 28px auto 0;
+    }
+
+    .before-slider-arrow {
+      display: inline-grid;
+      place-items: center;
+      width: 44px;
+      height: 54px;
+      border: 0;
+      background: transparent;
+      color: #8DA0AF;
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 40px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .before-slider-arrow--prev {
+      grid-column: 1;
+    }
+
+    .before-slider-arrow--next {
+      grid-column: 4;
+    }
+
+    .before-slider-dots {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .before-slider-dot {
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(77, 162, 241, 0.28);
+      padding: 0;
+    }
+
+    .before-slider-dot.is-active {
+      background: #27AEE4;
+    }
+
+    .before-slider-dot:nth-child(n+3) {
+      display: none;
+    }
+
+    .before-result-img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      background: #F7F7F7;
+    }
+
+    .before-result-img:not(.is-active):not(.is-next) {
+      display: none;
+    }
+
+    .before-result-img.is-active {
+      grid-column: 2;
+    }
+
+    .before-result-img.is-next {
+      grid-column: 3;
+    }
+
+    .result-benefit-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+      width: 100%;
+      max-width: 760px;
+      margin: 24px auto 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .result-benefit-grid li {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      gap: 10px;
+      color: #00122B;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      text-align: center;
+      padding: 14px 16px;
+      border: 1px solid rgba(77, 162, 241, 0.36);
+      border-radius: 8px;
+      background: transparent;
+    }
+
+    .result-benefit-grid span:last-child {
+      min-width: 0;
+      overflow-wrap: break-word;
+    }
+
+    .result-benefit-check {
+      display: inline-grid;
+      place-items: center;
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      border-radius: 50%;
+      background: #27AEE4;
+      color: #FFFFFF;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 800;
+    }
+
     @media (max-width: 743px) {
       .ingredients-section .split-block,
       .ingredients-section .copy-block,
@@ -3290,6 +3440,85 @@
         font-size: 16px;
         line-height: 24px;
       }
+
+      .before-image-row {
+        grid-template-columns: 34px minmax(0, 1fr) 34px;
+        align-items: center;
+        gap: 6px;
+        max-width: 430px;
+        margin-top: 18px;
+      }
+
+      .before-slider-arrow {
+        width: 34px;
+        height: 44px;
+        font-size: 34px;
+      }
+
+      .before-slider-arrow--prev {
+        grid-column: 1;
+      }
+
+      .before-slider-arrow--next {
+        grid-column: 3;
+      }
+
+      .result-headline-section h2 {
+        max-width: min(300px, 100%);
+      }
+
+      .result-benefit-grid {
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .result-benefit-grid li {
+        gap: 8px;
+        font-size: 15px;
+        line-height: 22px;
+        padding: 12px 10px;
+      }
+
+      .result-benefit-check {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+      }
+
+      .before-result-img {
+        grid-column: 2;
+        grid-row: 1;
+        display: none;
+        width: min(100%, 380px);
+        border-radius: 6px;
+      }
+
+      .before-result-img.is-active {
+        display: block;
+      }
+
+      .before-result-img.is-next {
+        display: none;
+      }
+
+      .before-slider-dots {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        margin-top: 8px;
+      }
+
+      .before-slider-dot {
+        width: 7px;
+        height: 7px;
+      }
+
+      .before-slider-dot:nth-child(n+3) {
+        display: inline-block;
+      }
+
     }
 
     @media (min-width: 744px) {
@@ -3302,6 +3531,32 @@
       .ingredients-section .copy-block p {
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .result-headline-section h2 {
+        font-size: 30px;
+        line-height: 38px;
+      }
+
+      .result-headline-section .lp-inner {
+        max-width: 1200px;
+      }
+
+      .result-headline-section .before-image-row {
+        max-width: 1120px;
+      }
+
+      .result-headline-section .result-benefit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 920px;
+      }
+
+      .result-headline-section {
+        padding-bottom: 16px;
+      }
+
+      .result-headline-section + .faq-flat {
+        padding-top: 28px;
       }
 
       .reviews-trust-summary {
@@ -3529,6 +3784,32 @@
       </div>
     </section>
 
+    <section class="lp-section result-headline-section">
+      <div class="lp-inner">
+        <h2>Zie hoe je huid gaat van "Dof en Droog" naar "Fris en Stralend"</h2>
+        <div class="before-image-row" data-before-slider aria-label="PeptiGlow huidresultaten">
+          <button class="before-slider-arrow before-slider-arrow--prev" type="button" data-before-prev aria-label="Vorige afbeelding">‹</button>
+          <img class="before-result-img is-active" src="before1.png" alt="PeptiGlow huidresultaat 1">
+          <img class="before-result-img is-next" src="before2.png" alt="PeptiGlow huidresultaat 2">
+          <img class="before-result-img" src="before3.png" alt="PeptiGlow huidresultaat 3">
+          <img class="before-result-img" src="before4.png" alt="PeptiGlow huidresultaat 4">
+          <button class="before-slider-arrow before-slider-arrow--next" type="button" data-before-next aria-label="Volgende afbeelding">›</button>
+          <div class="before-slider-dots" aria-hidden="true">
+            <span class="before-slider-dot is-active"></span>
+            <span class="before-slider-dot"></span>
+            <span class="before-slider-dot"></span>
+            <span class="before-slider-dot"></span>
+          </div>
+        </div>
+        <ul class="result-benefit-grid">
+          <li><span class="result-benefit-check">✓</span><span>Elke ochtend een frisser, gladder gezicht</span></li>
+          <li><span class="result-benefit-check">✓</span><span>Verzorgd ogen zonder lagen make-up</span></li>
+          <li><span class="result-benefit-check">✓</span><span>Jezelf herkennen in de ochtendspiegel</span></li>
+          <li><span class="result-benefit-check">✓</span><span>Dat moment: "mijn huid voelt écht anders"</span></li>
+        </ul>
+      </div>
+    </section>
+
     <section class="lp-section faq-flat">
       <div class="lp-inner">
         <h2>Al je vragen zijn beantwoord:</h2>
@@ -3629,6 +3910,36 @@
     });
 
     renderThumbWindow();
+
+    document.querySelectorAll("[data-before-slider]").forEach((slider) => {
+      const beforeImages = Array.from(slider.querySelectorAll(".before-result-img"));
+      const beforeDots = Array.from(slider.querySelectorAll(".before-slider-dot"));
+      const beforePrev = slider.querySelector("[data-before-prev]");
+      const beforeNext = slider.querySelector("[data-before-next]");
+      let beforeActive = 0;
+
+      function getBeforeStep() {
+        return window.matchMedia("(min-width: 744px)").matches ? 2 : 1;
+      }
+
+      function setBeforeSlide(index) {
+        if (!beforeImages.length) return;
+        beforeActive = (index + beforeImages.length) % beforeImages.length;
+        const beforeNextIndex = (beforeActive + 1) % beforeImages.length;
+        beforeImages.forEach((image, imageIndex) => {
+          image.classList.toggle("is-active", imageIndex === beforeActive);
+          image.classList.toggle("is-next", imageIndex === beforeNextIndex);
+        });
+        const beforeStep = getBeforeStep();
+        const activeDotIndex = beforeStep === 2 ? Math.floor(beforeActive / 2) : beforeActive;
+        beforeDots.forEach((dot, dotIndex) => {
+          dot.classList.toggle("is-active", dotIndex === activeDotIndex);
+        });
+      }
+
+      beforePrev?.addEventListener("click", () => setBeforeSlide(beforeActive - getBeforeStep()));
+      beforeNext?.addEventListener("click", () => setBeforeSlide(beforeActive + getBeforeStep()));
+    });
 
     const stickyTimer = document.querySelector(".sticky-timer");
     const stickyShipCopy = document.querySelector(".sticky-ship-copy");
