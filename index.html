@@ -3296,142 +3296,160 @@
       overflow: hidden;
     }
 
-    .ingredients-mobile-visual {
-      display: none;
-    }
-
-    .result-headline-section {
-      padding-bottom: 8px;
-    }
-
-    .result-headline-section + .faq-flat {
-      padding-top: 20px;
-    }
-
-    .result-headline-section h2 {
-      color: #00122B;
-      font-size: 24px;
-      line-height: 32px;
-      font-weight: 800;
-      letter-spacing: 0;
-      max-width: 880px;
-      margin: 0 auto;
-      text-align: center;
-      overflow-wrap: break-word;
-    }
-
-    .before-image-row {
-      display: grid;
-      grid-template-columns: 44px repeat(2, minmax(0, 1fr)) 44px;
-      align-items: center;
-      gap: 14px;
+    .result-split-section .ingredients-visual {
       width: 100%;
-      max-width: 760px;
-      margin: 28px auto 0;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    .before-slider-arrow {
-      display: inline-grid;
-      place-items: center;
-      width: 44px;
-      height: 54px;
-      border: 0;
-      background: transparent;
-      color: #8DA0AF;
-      font-family: "Open Sans", Arial, sans-serif;
-      font-size: 40px;
-      line-height: 1;
+    .result-photo-slider {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+
+    .result-photo-frame {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      background: #F7F7F7;
+    }
+
+    .result-photo-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .result-photo-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      box-sizing: border-box;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.94);
+      color: #00122B;
+      font-size: 0;
+      line-height: 0;
+      box-shadow: 0 6px 16px rgba(0, 18, 43, 0.14);
       cursor: pointer;
       padding: 0;
     }
 
-    .before-slider-arrow--prev {
-      grid-column: 1;
+    .result-photo-arrow::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #00122B;
+      border-right: 2px solid #00122B;
     }
 
-    .before-slider-arrow--next {
-      grid-column: 4;
+    .result-photo-arrow--prev {
+      left: 6px;
     }
 
-    .before-slider-dots {
-      grid-column: 1 / -1;
+    .result-photo-arrow--prev::before {
+      transform: translateX(1px) rotate(-135deg);
+    }
+
+    .result-photo-arrow--next {
+      right: 6px;
+    }
+
+    .result-photo-arrow--next::before {
+      transform: translateX(-1px) rotate(45deg);
+    }
+
+    .result-photo-dots {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
-      margin-top: 2px;
+      gap: 7px;
+      margin-top: 8px;
     }
 
-    .before-slider-dot {
-      width: 8px;
-      height: 8px;
+    .result-photo-dot {
+      width: 7px;
+      height: 7px;
       border: 0;
       border-radius: 50%;
       background: rgba(77, 162, 241, 0.28);
       padding: 0;
     }
 
-    .before-slider-dot.is-active {
+    .result-photo-dot.is-active {
       background: #27AEE4;
     }
 
-    .before-slider-dot:nth-child(n+3) {
+    .result-split-section {
+      padding-top: 24px;
+      padding-bottom: 18px;
+    }
+
+    .result-split-section .split-block,
+    .result-split-section .copy-block {
+      justify-items: center;
+      text-align: center;
+    }
+
+    .result-split-section .copy-block h2 {
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .result-split-section + .faq-flat {
+      padding-top: 0;
+    }
+
+    .ingredients-mobile-visual {
       display: none;
     }
 
-    .before-result-img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      height: auto;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 8px;
-      border: 1px solid rgba(17, 24, 39, 0.08);
-      background: #F7F7F7;
-    }
-
-    .before-result-img:not(.is-active):not(.is-next) {
-      display: none;
-    }
-
-    .before-result-img.is-active {
-      grid-column: 2;
-    }
-
-    .before-result-img.is-next {
-      grid-column: 3;
-    }
-
-    .result-benefit-grid {
+    .result-split-section .result-benefit-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
       gap: 12px;
       width: 100%;
-      max-width: 760px;
-      margin: 24px auto 0;
+      max-width: 520px;
+      margin: 18px auto 0;
       padding: 0;
       list-style: none;
-      text-align: center;
+      text-align: left;
     }
 
-    .result-benefit-grid li {
+    .result-split-section .result-benefit-grid li {
       display: flex;
       align-items: start;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 10px;
       color: #00122B;
       font-size: 16px;
       line-height: 24px;
       font-weight: 400;
-      text-align: center;
-      padding: 14px 16px;
+      text-align: left;
+      padding: 12px 14px;
       border: 1px solid rgba(77, 162, 241, 0.36);
       border-radius: 8px;
       background: transparent;
     }
 
-    .result-benefit-grid span:last-child {
+    .result-split-section .result-benefit-grid span:last-child {
       min-width: 0;
       overflow-wrap: break-word;
     }
@@ -3470,6 +3488,19 @@
         display: none !important;
       }
 
+      .result-split-section .ingredients-visual {
+        display: none !important;
+      }
+
+      .result-split-section {
+        padding-top: 24px;
+        padding-bottom: 18px;
+      }
+
+      .result-split-section + .faq-flat {
+        padding-top: 0;
+      }
+
       .ingredients-section .copy-stack {
         gap: 16px;
         margin: 0 auto 24px !important;
@@ -3482,82 +3513,26 @@
         line-height: 24px;
       }
 
-      .before-image-row {
-        grid-template-columns: 34px minmax(0, 1fr) 34px;
-        align-items: center;
-        gap: 6px;
-        max-width: 430px;
-        margin-top: 18px;
-      }
-
-      .before-slider-arrow {
-        width: 34px;
-        height: 44px;
-        font-size: 34px;
-      }
-
-      .before-slider-arrow--prev {
-        grid-column: 1;
-      }
-
-      .before-slider-arrow--next {
-        grid-column: 3;
-      }
-
-      .result-headline-section h2 {
-        max-width: min(300px, 100%);
-      }
-
-      .result-benefit-grid {
+      .result-split-section .result-benefit-grid {
         gap: 10px;
         margin-top: 18px;
       }
 
-      .result-benefit-grid li {
+      .result-split-section .result-benefit-grid li {
+        align-items: center;
+        justify-content: center;
         gap: 8px;
         font-size: 15px;
         line-height: 22px;
+        text-align: center;
         padding: 12px 10px;
       }
 
       .result-benefit-check {
         width: 20px;
         height: 20px;
+        margin-top: 0;
         font-size: 14px;
-      }
-
-      .before-result-img {
-        grid-column: 2;
-        grid-row: 1;
-        display: none;
-        width: min(100%, 380px);
-        border-radius: 6px;
-      }
-
-      .before-result-img.is-active {
-        display: block;
-      }
-
-      .before-result-img.is-next {
-        display: none;
-      }
-
-      .before-slider-dots {
-        grid-column: 1 / -1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 7px;
-        margin-top: 8px;
-      }
-
-      .before-slider-dot {
-        width: 7px;
-        height: 7px;
-      }
-
-      .before-slider-dot:nth-child(n+3) {
-        display: inline-block;
       }
 
     }
@@ -3574,30 +3549,18 @@
         margin-right: auto;
       }
 
-      .result-headline-section h2 {
-        font-size: 30px;
-        line-height: 38px;
+      .result-split-section .result-benefit-grid {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 100%;
       }
 
-      .result-headline-section .lp-inner {
-        max-width: 1200px;
+      .result-split-section {
+        padding-top: 40px;
+        padding-bottom: 28px;
       }
 
-      .result-headline-section .before-image-row {
-        max-width: 1120px;
-      }
-
-      .result-headline-section .result-benefit-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        max-width: 920px;
-      }
-
-      .result-headline-section {
-        padding-bottom: 16px;
-      }
-
-      .result-headline-section + .faq-flat {
-        padding-top: 28px;
+      .result-split-section + .faq-flat {
+        padding-top: 0;
       }
 
       .reviews-trust-summary {
@@ -3611,6 +3574,17 @@
       .reviews-section {
         padding-top: 48px;
         padding-bottom: 48px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .result-split-section {
+        padding-top: 48px;
+        padding-bottom: 32px;
+      }
+
+      .result-split-section + .faq-flat {
+        padding-top: 0;
       }
     }
   </style>
@@ -3680,23 +3654,6 @@
         </div>
       </div>
     </section>
-
-    <div class="benefits-marquee" aria-label="Store benefits">
-      <div class="benefits-marquee-track">
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.7-2.7 8.2-7 10-4.3-1.8-7-5.3-7-10V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg></span> 90 dagen geld-terug-garantie</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v10H3z"></path><path d="M14 11h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg></span> Snelle verzending</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg></span> Lichte formule, niet plakkerig</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.7-2.7 8.2-7 10-4.3-1.8-7-5.3-7-10V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg></span> 90 dagen geld-terug-garantie</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v10H3z"></path><path d="M14 11h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg></span> Snelle verzending</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg></span> Lichte formule, niet plakkerig</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.7-2.7 8.2-7 10-4.3-1.8-7-5.3-7-10V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg></span> 90 dagen geld-terug-garantie</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v10H3z"></path><path d="M14 11h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg></span> Snelle verzending</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg></span> Lichte formule, niet plakkerig</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.7-2.7 8.2-7 10-4.3-1.8-7-5.3-7-10V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg></span> 90 dagen geld-terug-garantie</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v10H3z"></path><path d="M14 11h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg></span> Snelle verzending</span>
-        <span class="benefits-marquee-item"><span class="benefits-marquee-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg></span> Lichte formule, niet plakkerig</span>
-      </div>
-    </div>
 
     <section class="lp-section lp-section--blue intro-section">
       <div class="lp-inner split-block">
@@ -3825,29 +3782,45 @@
       </div>
     </section>
 
-    <section class="lp-section result-headline-section">
-      <div class="lp-inner">
-        <h2>Zie hoe je huid gaat van "Dof en Droog" naar "Fris en Stralend"</h2>
-        <div class="before-image-row" data-before-slider aria-label="PeptiGlow huidresultaten">
-          <button class="before-slider-arrow before-slider-arrow--prev" type="button" data-before-prev aria-label="Vorige afbeelding">‹</button>
-          <img class="before-result-img is-active" src="before1.png" alt="PeptiGlow huidresultaat 1">
-          <img class="before-result-img is-next" src="before2.png" alt="PeptiGlow huidresultaat 2">
-          <img class="before-result-img" src="before3.png" alt="PeptiGlow huidresultaat 3">
-          <img class="before-result-img" src="before4.png" alt="PeptiGlow huidresultaat 4">
-          <button class="before-slider-arrow before-slider-arrow--next" type="button" data-before-next aria-label="Volgende afbeelding">›</button>
-          <div class="before-slider-dots" aria-hidden="true">
-            <span class="before-slider-dot is-active"></span>
-            <span class="before-slider-dot"></span>
-            <span class="before-slider-dot"></span>
-            <span class="before-slider-dot"></span>
+    <section class="lp-section result-split-section">
+      <div class="lp-inner split-block">
+        <div class="copy-block">
+          <h2>Zie hoe je huid gaat van dof en droog naar fris en stralend</h2>
+          <div class="ingredients-mobile-visual" aria-label="PeptiGlow huidresultaat">
+            <div class="result-photo-slider" data-result-photo-slider>
+              <button class="result-photo-arrow result-photo-arrow--prev" type="button" data-result-photo-prev aria-label="Vorige afbeelding">‹</button>
+              <div class="result-photo-frame">
+                <img class="result-photo-img" src="before1.png" alt="PeptiGlow huidresultaat 1">
+              </div>
+              <button class="result-photo-arrow result-photo-arrow--next" type="button" data-result-photo-next aria-label="Volgende afbeelding">›</button>
+              <div class="result-photo-dots" aria-hidden="true">
+                <span class="result-photo-dot is-active"></span>
+                <span class="result-photo-dot"></span>
+                <span class="result-photo-dot"></span>
+              </div>
+            </div>
           </div>
-        </div>
         <ul class="result-benefit-grid">
           <li><span class="result-benefit-check">✓</span><span>Elke ochtend een frisser, gladder gezicht</span></li>
           <li><span class="result-benefit-check">✓</span><span>Verzorgd ogen zonder lagen make-up</span></li>
           <li><span class="result-benefit-check">✓</span><span>Jezelf herkennen in de ochtendspiegel</span></li>
           <li><span class="result-benefit-check">✓</span><span>Dat moment: "mijn huid voelt écht anders"</span></li>
         </ul>
+        </div>
+        <div class="ingredients-visual" aria-label="PeptiGlow huidresultaat">
+          <div class="result-photo-slider" data-result-photo-slider>
+            <button class="result-photo-arrow result-photo-arrow--prev" type="button" data-result-photo-prev aria-label="Vorige afbeelding">‹</button>
+            <div class="result-photo-frame">
+              <img class="result-photo-img" src="before1.png" alt="PeptiGlow huidresultaat 1">
+            </div>
+            <button class="result-photo-arrow result-photo-arrow--next" type="button" data-result-photo-next aria-label="Volgende afbeelding">›</button>
+            <div class="result-photo-dots" aria-hidden="true">
+              <span class="result-photo-dot is-active"></span>
+              <span class="result-photo-dot"></span>
+              <span class="result-photo-dot"></span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -3952,34 +3925,27 @@
 
     renderThumbWindow();
 
-    document.querySelectorAll("[data-before-slider]").forEach((slider) => {
-      const beforeImages = Array.from(slider.querySelectorAll(".before-result-img"));
-      const beforeDots = Array.from(slider.querySelectorAll(".before-slider-dot"));
-      const beforePrev = slider.querySelector("[data-before-prev]");
-      const beforeNext = slider.querySelector("[data-before-next]");
-      let beforeActive = 0;
+    const resultPhotoImages = ["before1.png", "before2.png", "before4.png"];
+    document.querySelectorAll("[data-result-photo-slider]").forEach((slider) => {
+      const image = slider.querySelector(".result-photo-img");
+      const dots = Array.from(slider.querySelectorAll(".result-photo-dot"));
+      const prev = slider.querySelector("[data-result-photo-prev]");
+      const next = slider.querySelector("[data-result-photo-next]");
+      let active = 0;
 
-      function getBeforeStep() {
-        return window.matchMedia("(min-width: 744px)").matches ? 2 : 1;
-      }
-
-      function setBeforeSlide(index) {
-        if (!beforeImages.length) return;
-        beforeActive = (index + beforeImages.length) % beforeImages.length;
-        const beforeNextIndex = (beforeActive + 1) % beforeImages.length;
-        beforeImages.forEach((image, imageIndex) => {
-          image.classList.toggle("is-active", imageIndex === beforeActive);
-          image.classList.toggle("is-next", imageIndex === beforeNextIndex);
-        });
-        const beforeStep = getBeforeStep();
-        const activeDotIndex = beforeStep === 2 ? Math.floor(beforeActive / 2) : beforeActive;
-        beforeDots.forEach((dot, dotIndex) => {
-          dot.classList.toggle("is-active", dotIndex === activeDotIndex);
+      function setResultPhoto(index) {
+        active = (index + resultPhotoImages.length) % resultPhotoImages.length;
+        if (image) {
+          image.src = resultPhotoImages[active];
+          image.alt = `PeptiGlow huidresultaat ${active + 1}`;
+        }
+        dots.forEach((dot, dotIndex) => {
+          dot.classList.toggle("is-active", dotIndex === active);
         });
       }
 
-      beforePrev?.addEventListener("click", () => setBeforeSlide(beforeActive - getBeforeStep()));
-      beforeNext?.addEventListener("click", () => setBeforeSlide(beforeActive + getBeforeStep()));
+      prev?.addEventListener("click", () => setResultPhoto(active - 1));
+      next?.addEventListener("click", () => setResultPhoto(active + 1));
     });
 
     const stickyTimer = document.querySelector(".sticky-timer");
