@@ -2699,9 +2699,50 @@
     @media (min-width: 744px) {
       .only-mobile { display: none; }
       .only-tablet-up { display: block; }
+      .sticky-cta {
+        background: #090908;
+        box-shadow: rgba(0, 0, 0, 0.28) 0 -4px 16px;
+      }
+
+      .sticky-cta .sticky-inner {
+        max-width: 560px;
+        padding: 10px 16px;
+        justify-content: center;
+      }
+
       .sticky-cta .btn-primary,
       .sticky-cta .btn-primary:hover {
-        background: #090908;
+        width: 100%;
+        max-width: 520px;
+        min-width: 0;
+        min-height: 58px;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        align-items: stretch;
+        justify-content: center;
+        gap: 0;
+      }
+
+      .sticky-cta-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 58px;
+        padding: 8px 18px;
+        border-radius: 8px;
+        background: var(--color-primary);
+        color: #FFFFFF;
+        box-shadow: rgba(77, 162, 241, 0.28) 0 4px 10px;
+        font-weight: 800;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .sticky-cta-sub {
+        display: none;
       }
       .lp-section {
         padding: 40px 16px;
