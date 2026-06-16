@@ -1595,7 +1595,7 @@
     }
 
     .reviews-gold-stars {
-      color: #d29629;
+      color: #edc866;
       font-size: 27px;
       line-height: 1;
       letter-spacing: 2px;
@@ -2631,8 +2631,8 @@
         padding-bottom: 24px;
       }
       .sticky-cta {
-        background: #090908;
-        box-shadow: rgba(0, 0, 0, 0.28) 0 -4px 16px;
+        background: #FFFFFF;
+        box-shadow: rgba(0, 0, 0, 0.12) 0 -4px 16px;
       }
       .sticky-cta .sticky-inner {
         width: 100%;
@@ -2679,7 +2679,7 @@
         align-items: center;
         justify-content: center;
         background: transparent;
-        color: #FFFFFF;
+        color: #090908;
         border-radius: 0;
         padding: 0 8px;
         margin-top: auto;
@@ -2689,9 +2689,11 @@
         text-align: center;
       }
       .sticky-cta .sticky-stock-label,
-      .sticky-cta .sticky-ship-copy,
+      .sticky-cta .sticky-ship-copy {
+        color: #090908;
+      }
       .sticky-cta .sticky-timer {
-        color: #FFFFFF;
+        color: #D0021B;
       }
       .sticky-cta-main { white-space: nowrap; }
     }
@@ -2700,8 +2702,8 @@
       .only-mobile { display: none; }
       .only-tablet-up { display: block; }
       .sticky-cta {
-        background: #090908;
-        box-shadow: rgba(0, 0, 0, 0.28) 0 -4px 16px;
+        background: #FFFFFF;
+        box-shadow: rgba(0, 0, 0, 0.12) 0 -4px 16px;
       }
 
       .sticky-cta .sticky-inner {
@@ -2715,14 +2717,15 @@
         width: 100%;
         max-width: 520px;
         min-width: 0;
-        min-height: 58px;
+        min-height: 82px;
         padding: 0;
         border-radius: 0;
         background: transparent;
         box-shadow: none;
         align-items: stretch;
-        justify-content: center;
-        gap: 0;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 6px;
       }
 
       .sticky-cta-main {
@@ -2742,7 +2745,29 @@
       }
 
       .sticky-cta-sub {
-        display: none;
+        width: 100%;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        color: #090908;
+        border-radius: 0;
+        padding: 0 8px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 800;
+        text-align: center;
+        text-transform: none;
+      }
+
+      .sticky-cta .sticky-stock-label,
+      .sticky-cta .sticky-ship-copy {
+        color: #090908;
+      }
+
+      .sticky-cta .sticky-timer {
+        color: #D0021B;
       }
       .lp-section {
         padding: 40px 16px;
